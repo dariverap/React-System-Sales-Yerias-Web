@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# 🛠️ Ferreteria Yerias - Web Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat-square&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=flat-square&logo=mui&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=flat-square&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
-## Available Scripts
+> A robust Single Page Application (SPA) for managing hardware store operations, including sales, inventory, purchases, and supplier management.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 🇪🇸 Versión en Español: [Leer aquí](./README.es.md)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🔗 Ecosystem & Related Repositories
 
-### `npm test`
+This repository is part of the **Ferreteria Yerias Ecosystem**. Ensure you have the backend API running for full functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   **Backend API (.NET):** [Net5-System-Sales-Yerias-RestAPI](https://github.com/dariverap/Net5-System-Sales-Yerias-RestAPI)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 👨‍💻 Author
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Created by Diego Rivera**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 💻 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project is built using modern frontend technologies to ensure performance and scalability:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*   **Framework:** [React 18](https://reactjs.org/)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Styling & UI:**
+    *   [Material UI (MUI)](https://mui.com/) - Core component library.
+    *   [Bootstrap 5](https://getbootstrap.com/) - Layout and utility classes.
+    *   Styled Components.
+*   **Data Fetching:** [Axios](https://axios-http.com/)
+*   **Data Visualization:** `@mui/x-data-grid` for advanced tables.
+*   **Utilities:**
+    *   `sweetalert2` for modal alerts.
+    *   `pdf-lib` for generating PDF invoices and reports.
+    *   `dayjs` for date manipulation.
+    *   `formik` & `yup` for form validation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🏗️ Architecture
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This **Web Client** acts as the user interface layer of the ecosystem.
 
-## Learn More
+1.  **Communication:** It consumes the RESTful API endpoints provided by the Backend service.
+2.  **Authentication:** Implements role-based access control (Admin, Seller, Warehouse) using Cookies and LocalStorage.
+3.  **Modules:**
+    *   **Catalog:** Product browsing and management.
+    *   **Sales:** Point of Sale (POS) interface with cart management.
+    *   **Purchases:** Supply chain management and restocking.
+    *   **Reports:** Sales and inventory reporting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Installation & Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+*   Node.js (v16 or higher)
+*   npm or yarn
+
+### Steps
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/dariverap/React-System-Sales-Yerias-Web
+    cd React-System-Sales-Yerias-Web
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Configuration**
+    Ensure the API is running. By default, the app looks for the API at `https://localhost:44318/api-ferreteria/`.
+    *To change this, update the base URLs in the component service files or refactor to use a `.env` file.*
+
+4.  **Run the application**
+    ```bash
+    npm start
+    ```
+    The app will open at `http://localhost:3000`.
+
+## 📦 Build for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
